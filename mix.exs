@@ -3,11 +3,11 @@ defmodule AnalyticsElixir.Mixfile do
 
   def project do
     [app: :segment,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.0",
-     deps: deps,
+     deps: deps(),
      description: "analytics_elixir",
-     package: package]
+     package: package()]
   end
 
   # Configuration for the OTP application
@@ -28,8 +28,8 @@ defmodule AnalyticsElixir.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.8"},
-      {:poison, "~> 1.3 or ~> 2.0"},
+      {:httpoison, "~> 0.11"},
+      {:poison, "~> 1.3 or ~> 2.0 or ~> 3.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
@@ -37,9 +37,9 @@ defmodule AnalyticsElixir.Mixfile do
   defp package do
     [ # These are the default files included in the package
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
-      maintainers: ["Stuart Eccles"],
+      maintainers: ["Vladimir Zhukov"],
       licenses: ["MIT"],
-      links: %{ "GitHub" => "https://github.com/stueccles/analytics-elixir" }
+      links: %{ "GitHub" => "https://github.com/voldy/analytics-elixir" }
     ]
   end
 end
